@@ -1,0 +1,40 @@
+<view wx:for="{{list}}" wx:key="index" wx:for-item="item" class="items" style="margin-bottom: 10px;" bindtap="toArticledetail" data-index="{{index}}">
+
+  <!-- userInfo -->
+  <view style="display: flex;align-items: center;justify-content: center;margin-top: 2px;margin: 2vw;">
+    <image src="{{list[index].userIcon}}" style="width: 40rpx;height: 40rpx;border-radius: 50%;"></image>
+    <p style="font-size: 4vw;">{{list[index].userName}}</p>
+  </view>
+
+
+  <!-- img -->
+  <view>
+    <swiper indicator-dots="true" autoplay="{{autoplay}}" class='swiper-block' style="height: {{heightList[index]}};">
+      <block wx:for='{{item.imgs}}' wx:key='imgIndex' wx:for-index='imgIndex' wx:for-item='imgItem'>
+        <swiper-item>
+          <!-- <p>{{index}}</p> -->
+          <!-- imgIndex==0表示每组的首图 -->
+          <image src='{{imgItem}}' mode='widthFix' class='swiper-item-images' id='img_img' wx:if="{{imgIndex==0}}"></image>
+          <image src='{{imgItem}}' mode='aspectFit' class='swiper-item-images' id='img_img' wx:if="{{imgIndex!=0}}" style="height: {{heightList[index]}};"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- text -->
+  <view class="row_spaceBetween">
+    <view id="title" style="margin-left: 10px;">{{item.title}}</view>
+    <!-- 投喂 -->
+    <view class="cloumCenter">
+      <image src="/pages/resource/basic/投喂0.png" style="width: 60rpx;height: 60rpx;margin-right: 3px;"></image>
+      <p style="margin-right: 10px;font-size: 5vw;">{{item.like}}</p>
+    </view>
+    
+  </view>
+  
+
+
+  <!-- more -->
+  <view>
+  </view>
+</view>

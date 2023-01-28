@@ -1,0 +1,75 @@
+<!--pages/smallNest/smallNest.wxml-->
+<view class="rowCenter">
+  <view id="searchBox" class="row_spaceBetween">
+    <input id="searchInput">
+    </input>
+    <image src="/pages/resource/navigationBarUI/查找0.png" id="searchBtn"></image>
+  </view>
+</view>
+
+<!-- 栏目 -->
+<view style="margin-top: 10px;">
+  <scroll-view style=" white-space: nowrap;" scroll-x="ture">
+    <view wx:for="{{classification}}" wx:key="index" wx:for-item="item" id="classification">
+
+      <!-- 未选中 -->
+      <view id="classBlock" wx:if="{{classSelect!=index}}" bindtap="CutClass" data-index="{{index}}">
+        <image wx:if="{{classification[index]}}" src="{{'/pages/resource/classificationUI/'+classification[index]+'0.png'}}" style="height: 4vh;width: 4vh;margin-left: 5rpx;"></image>
+        <view style="margin-right: 10rpx;font-weight:lighter;">{{classification[index]}}</view>
+      </view>
+      <!-- 选中 -->
+      <view id="classBlock" wx:if="{{classSelect==index}}" style="background-color: rgb(199, 199, 199);" bindtap="CutClass" data-index="{{index}}">
+        <image wx:if="{{classification[index]}}" src="{{'/pages/resource/classificationUI/'+classification[index]+'0.png'}}" style="height: 4vh;width: 4vh;margin-left: 5rpx;"></image>
+        <view style="margin-right: 10rpx;">{{classification[index]}}</view>
+      </view>
+
+    </view>
+  </scroll-view>
+</view>
+
+
+<view class="row">
+  <!-- 第一列 -->
+  <view class="box_row_left">
+    <view wx:for="{{petList}}" wx:key="index" wx:for-item="item" wx:if="{{index % 2 == 0}}" class="petBox">
+
+        <!-- <image src="{{item.icon}}" style="width: 180rpx;height: 180rpx;border-radius: 50%;margin-top: 10px;margin-bottom: 10px;"></image> -->
+        <view style="width: 180rpx;height: 180rpx;border-radius: 50%;margin-top: 10px;margin-bottom: 10px;border: rgb(230, 230, 230);border-style: solid;border-width: 1rpx;display: flex;justify-content: center;align-items: center;">
+          <image src="{{item.icon}}" style="width: 160rpx;height: 160rpx;border-radius: 50%;"></image>
+        </view>
+
+        <view class="cloumCenter">
+          <image src="{{'/pages/resource/classificationUI/'+item.classification+'0.png'}}" style="height: 4vh;width: 4vh;margin-left: 5rpx;"></image>
+          <view>{{item.name}}</view>
+        </view>
+        
+        <button style="height: 40px;width: 220rpx;padding: 0px;margin-bottom: 10px;" 	hover-class="cilkBut">
+          进入小窝
+        </button>
+
+    </view>
+  </view>
+
+
+  <!-- 第二列 -->
+  <view class="box_row_right">
+    <view wx:for="{{petList}}" wx:key="index" wx:for-item="item" wx:if="{{index % 2 == 1}}" class="petBox">
+
+        <view style="width: 180rpx;height: 180rpx;border-radius: 50%;margin-top: 10px;margin-bottom: 10px;border: rgb(230, 230, 230);border-style: solid;border-width: 1rpx;display: flex;justify-content: center;align-items: center;">
+          <image src="{{item.icon}}" style="width: 160rpx;height: 160rpx;border-radius: 50%;"></image>
+        </view>
+        
+
+        <view class="cloumCenter">
+          <image src="{{'/pages/resource/classificationUI/'+item.classification+'0.png'}}" style="height: 4vh;width: 4vh;margin-left: 5rpx;"></image>
+          <view>{{item.name}}</view>
+        </view>
+
+        <button style="height: 40px;width: 220rpx;padding: 0px;margin-bottom: 10px;" 	hover-class="cilkBut">
+          进入小窝
+        </button>
+
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/smallNest/smallNest",
+    "pages/add/add",
+    "pages/news/news",
+    "pages/more/more",
+    "pages/articledetail/articledetail"
+  ],
+  "tabBar": {
+    "selectedColor": "#f3ca7e",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "广场",
+        "iconPath": "./pages/resource/navigationBarUI/首页0.png",
+        "selectedIconPath": "./pages/resource/navigationBarUI/首页1.png"
+      },
+      {
+        "pagePath": "pages/smallNest/smallNest",
+        "text": "小窝",
+        "iconPath": "./pages/resource/navigationBarUI/小窝0.png",
+        "selectedIconPath": "./pages/resource/navigationBarUI/小窝1.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "text": "发布",
+        "iconPath": "./pages/resource/navigationBarUI/增加0.png",
+        "selectedIconPath": "./pages/resource/navigationBarUI/增加1.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "消息",
+        "iconPath": "./pages/resource/navigationBarUI/消息0.png",
+        "selectedIconPath": "./pages/resource/navigationBarUI/消息1.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "更多",
+        "iconPath": "./pages/resource/navigationBarUI/更多0.png",
+        "selectedIconPath": "./pages/resource/navigationBarUI/更多1.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云宠瞬间",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,119 @@
+/* pages/add/add.wxss */
+
+/* 标题 */
+.title_input_focus {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 94%;
+  height: 6vh;
+  font-size: 4vh;
+  border: 0;
+  outline: 0;
+  /* 隐藏输入时的边框 */
+  border-bottom: 1px solid #f3ca7e;
+
+  /* 设置下划线 */
+  background: none;
+}
+
+.title_input_blur {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 94%;
+  height: 6vh;
+  font-size: 4vh;
+  border: 0;
+  outline: 0;
+  /* 隐藏输入时的边框 */
+  border-bottom: 1px solid rgb(136, 136, 136);
+  /* 设置下划线 */
+  background: none;
+}
+
+/* 内容输入框 */
+#content_input_focus{
+  margin: 5px;
+  width: 94%;
+  height: 24vh;
+  font-size: 3vh;
+  border: 0;
+  outline: 0;
+  /* 隐藏输入时的边框 */
+  border-bottom: 1px solid #f3ca7e;
+  /* 设置下划线 */
+  background: none;
+}
+
+#content_input_blur{
+  margin: 5px;
+  width: 94%;
+  height: 24vh;
+  font-size: 3vh;
+  border: 0;
+  outline: 0;
+  /* 隐藏输入时的边框 */
+  border-bottom: 1px solid rgb(136, 136, 136);
+  /* 设置下划线 */
+  background: none;
+}
+
+/* .placeholder-style0{
+  color: rgb(173, 15, 15);
+}
+.placeholder-style1{
+  color: rgb(15, 26, 173);
+} */
+
+.scroll_img{
+  white-space: nowrap;
+  height: 32vw;
+  width: 65vw;
+  display: flex;
+  flex-direction: row;
+}
+
+#img_view{
+  height: 30vw;
+  display: inline-block;
+}
+
+/* 按钮样式 */
+.issueButton {
+  /* 按钮位置 */
+  position: fixed;
+  bottom: 5vh;
+  /* margin: 20px; */
+  width: 43vw !important;
+  margin-left: 5px;
+  background-color: #f3ca7e;
+  color: #ffffff;
+}
+
+/* 按钮点击特效 */
+.issueButton1 {
+  background-color: #f1d39b;
+}
+
+/* 通用样式 */
+/* 纵向+居中 */
+.Column_Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+/* 横向居中 */
+.Row_Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Row{
+  height: 32vw;
+  display: flex;
+  flex-direction: row;
+}

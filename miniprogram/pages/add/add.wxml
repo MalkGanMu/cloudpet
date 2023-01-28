@@ -1,0 +1,28 @@
+<!--pages/add/add.wxml-->
+<!-- 输入框 -->
+<view class="Column_Center">
+      <input class="{{titleState == 0 ? 'title_input_blur' : 'title_input_focus'}}" type="text" placeholder="在此输入标题" bindfocus="TitleInputFocus"  bindblur='TitleInputBlur' bindinput="getInputTitle" value='{{title}}'/>
+
+      <textarea placeholder="在此输入内容" id="{{contentState == 0 ? 'content_input_blur' : 'content_input_focus'}}" bindfocus="ContentInputFocus"  bindblur='ContentInputBlur' bindinput="getInputContent" value='{{content}}'></textarea>
+    </view>
+
+    <!-- 图片 -->
+    <view class="Row">
+      <view>
+        <image src="/pages/resource/basic/addImg.png" style="height: 30vw;width: 30vw;margin: 1vw;" bindtap="addImg">
+        </image>
+      </view>
+      <scroll-view class="scroll_img" scroll-x="true" show-scrollbar="true">
+        <view wx:for="{{images}}" wx:key="index" id="img_view" bindlongpress="delImg" data-index="{{index}}">
+          <image src='{{item}}' mode='heightFix' style="height: 30vw;margin: 1vw;"/>
+        </view>
+      </scroll-view>
+    </view>
+
+<!-- 这里写删除照片的方法注释 -->
+
+
+    <!-- 发送 -->
+    <view class="Row_Center">
+      <button class="issueButton" hover-class="issueButton1" bindtap="onIssue">发布</button>
+    </view>

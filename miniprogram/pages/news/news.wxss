@@ -1,0 +1,43 @@
+/* pages/news/news.wxss */
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* 通用css */
+/* 横向布局 */
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 纵向布局,横向居中 */
+.colum_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 横向布局,两端对齐 */
+.row_spaceBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* 纵向居中 */
+.cloumCenter {
+  display: flex;
+  align-items: center;
+}
+
+/* 横向居中 */
+.rowCenter {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,27 @@
+<!--pages/healthsquare/articledetail/articledetail.wxml-->
+
+<swiper indicator-dots="true" autoplay="{{autoplay}}" interval="2000" duration="500" easing-function="linear" circular="true" class='swiper-block' style="height:{{imgheight}}rpx;">
+
+  <block wx:for='{{images}}' wx:key='index'>
+    <swiper-item>
+      <image src='{{item}}' mode='aspectFit' class='swiper-item-images' style="height:{{imgheight}}rpx;" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="colum_view" style="margin-left: 5px;">
+  <view>
+    <text style="font-weight: bold;font-size: 5vw;">{{title}}</text>
+    <text>  </text>
+    <text style="font-size: 5vw;margin-top: 8rpx;margin-bottom: 8rpx;">{{content}}</text>
+  </view>
+  
+  <text style="font-size: 4vw;">{{createTime}}</text>
+
+  <!-- 信息 -->
+  <view style="display: flex;align-items: center;justify-content: center;margin-top: 2px;margin-right: 5px;">
+
+    <image src="{{userIcon}}" style="width: 40rpx;height: 40rpx;border-radius: 50%;margin-right: 5px;"></image>
+    <p style="font-size: 4vw;">{{userName}}</p>
+
+  </view>
+</view>

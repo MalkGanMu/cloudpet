@@ -1,0 +1,66 @@
+#img_img{
+  width: 100%;
+}
+
+
+.swiper-block .wx-swiper-dot{
+  width: 30rpx;
+  height: 12rpx;
+  display: inline-flex;
+  margin-left: 15rpx;
+  border-radius: 6rpx;
+}
+.swiper-block .wx-swiper-dots.wx-swiper-dots-horizontal{
+  margin-bottom: -4rpx;
+}
+.swiper-block .wx-swiper-dot::before{
+  content: '';
+  background: rgba(255, 255, 255, 0.2);
+  flex-grow: 1;
+}
+.swiper-block .wx-swiper-dot-active::before{
+  content: '';
+  background:#0be886;
+  flex-grow: 1;
+  border-radius: 6rpx;
+}
+
+
+
+
+/* 限制文本行数 */
+#title {
+  font-size: 5vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 通用css */
+/* 横向布局 */
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 纵向布局,横向居中 */
+.colum_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 横向布局,两端对齐 */
+.row_spaceBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* 纵向居中 */
+.cloumCenter {
+  display: flex;
+  align-items: center;
+}

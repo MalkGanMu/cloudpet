@@ -1,0 +1,45 @@
+/* pages/healthsquare/articledetail/articledetail.wxss */
+.swiper-item-images{
+  width:700rpx;
+  margin-left: 25rpx;
+}
+.swiper-block{
+  width:750rpx;
+}
+.swiper-block .wx-swiper-dot{
+  width: 30rpx;
+  height: 12rpx;
+  display: inline-flex;
+  margin-left: 15rpx;
+  border-radius: 6rpx;
+}
+.swiper-block .wx-swiper-dots.wx-swiper-dots-horizontal{
+  margin-bottom: -4rpx;
+}
+.swiper-block .wx-swiper-dot::before{
+  content: '';
+  background: rgba(255, 255, 255, 0.2);
+  flex-grow: 1;
+}
+.swiper-block .wx-swiper-dot-active::before{
+  content: '';
+  background:#0be886;
+  flex-grow: 1;
+  border-radius: 6rpx;
+}
+
+
+
+/* 纵向布局 */
+.colum_view {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+/* 横向布局 */
+.row_view {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+}

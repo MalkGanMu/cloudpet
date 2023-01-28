@@ -1,0 +1,5 @@
+<!--pages/news/news.wxml-->
+<view class="add">
+  <image src="/pages/resource/navigationBarUI/消息0.png" style="width: 150rpx;height: 150rpx;margin-bottom: 10px;"></image>
+  <view style="font-weight:bold">无信息</view>
+</view>

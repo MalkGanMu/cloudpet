@@ -1,0 +1,100 @@
+<!--pages/more/more.wxml-->
+<!--pages/more/more.wxml-->
+<view id="banner">
+
+  <view class="row" style="height: 220rpx;margin-top: 5vh;margin-left: 2vh;" bindtap="onLogin">
+    <view id="iconImage">
+      <image src="{{userInfo.avatarUrl}}" style="width: 200rpx;height: 200rpx;border-radius: 50% 50% 50% 50%;"></image>
+    </view>
+
+    <view style=" margin-left: 8px;display: flex;flex-direction: column;justify-content: center;">
+      <view style="font-weight:bold;font-size: 6vw;" wx:if="{{!hasUserInfo}}">点击登录</view>
+      <view style="font-weight:bold;font-size: 6vw;" wx:if="{{hasUserInfo}}">{{userInfo.nickName}}</view>
+      <view style="font-size: 4vw;">这个家伙很懒,没有留下任何东西</view>
+    </view>
+  </view>
+
+</view>
+
+<view class="row" style="height: 200rpx;margin-top: -95rpx;">
+  <view class="column" style="height: 180rpx;width: 530rpx;">
+    <!-- 宠物list -->
+    <swiper style="height: 90rpx;" display-multiple-items="{{MAXdisplay}}" circular='ture' bindchange="cutPet" current="{{swiperIndex}}">
+      <swiper-item wx:for="{{petList}}" wx:key="index" wx:for-item="item" bindtap="cutPetIndex" data-index="{{index}}" class="rowCenter">
+        <image src="{{item.icon}}" style="width: 90rpx;height: 90rpx;border-radius: 50% 50% 50% 50%;"></image>
+      </swiper-item>
+    </swiper>
+
+    <!-- 宠物id -->
+    <view style="height: 90rpx;margin-right: 10px;display: flex;justify-content: flex-end;align-items: center;">
+      <image wx:if="{{selectPet != null}}" src="{{'/pages/resource/classificationUI/'+selectPet.classification+'0.png'}}" style="width: 70rpx;height: 70rpx;"></image>
+      <view style="font-size: 6vw;">{{selectPet.name}}</view>
+    </view>
+
+  </view>
+
+  <!-- 宠物头像 -->
+  <view style="width: 200rpx;height: 200rpx;" class="{{petTotal == 0 ? 'petIcon0' : 'petIcon1'}}">
+    <image src="{{selectPet.icon}}" style="width: 180rpx;height: 180rpx;border-radius: 50% 50% 50% 50%;"></image>
+  </view>
+</view>
+
+<!-- 横栏 -->
+<view class="row" style="width: 750rpx;justify-content: space-around;margin-top: 10rpx;">
+  <!-- 帖子 -->
+  <view class="petDataBar">
+    <image src='/pages/resource/basic/帖子0.png' style="width: 55rpx;height: 55rpx;"></image>
+    <view style="font-weight: lighter;margin: 2px;font-size: 4vw;">{{petPostTotal}}</view>
+    <view style="font-size: 4vw;">发帖</view>
+  </view>
+
+  <!-- 投喂 -->
+  <view class="petDataBar">
+    <image src='/pages/resource/basic/投喂0.png' style="width: 55rpx;height: 55rpx;"></image>
+    <view style="font-weight: lighter;margin: 2px;font-size: 4vw;">{{petLike}}</view>
+    <view style="font-size: 4vw;">投喂</view>
+  </view>
+
+  <!-- 关注 -->
+  <view class="petDataBar">
+    <image src='/pages/resource/basic/粉丝0.png' style="width: 55rpx;height: 55rpx;"></image>
+    <view style="font-weight: lighter;margin: 2px;font-size: 4vw;">{{petFollow}}</view>
+    <view style="font-size: 4vw;">关注</view>
+  </view>
+</view>
+
+<!-- <view style="height: 400rpx;">
+
+</view> -->
+<view style="height: 100%;margin-top: 10rpx;">
+  <scroll-view class="listSCroll" scroll-y="true" lower-threshold="50" bindscrolltolower="scrolltolower">
+
+    <view class="row">
+
+      <!-- 1 -->
+      <view id="row1">
+        <view wx:for="{{petPostList}}" wx:key="index" wx:for-item="item" wx:if="{{index % 3 == 0}}" class="petBox">
+          <image src="{{item.imgs[0]}}" style="height: 250rpx;width: 250rpx;"></image>
+        </view>
+      </view>
+
+      <!-- 2 -->
+      <view id="row1">
+        <view wx:for="{{petPostList}}" wx:key="index" wx:for-item="item" wx:if="{{index % 3 == 1}}" class="petBox">
+          <image src="{{item.imgs[0]}}" style="height: 250rpx;width: 250rpx;"></image>
+        </view>
+      </view>
+
+      <!-- 3 -->
+      <view id="row1">
+        <view wx:for="{{petPostList}}" wx:key="index" wx:for-item="item" wx:if="{{index % 3 == 2}}" class="petBox">
+          <image src="{{item.imgs[0]}}" style="height: 250rpx;width: 250rpx;"></image>
+        </view>
+      </view>
+
+
+    </view>
+
+
+  </scroll-view>
+</view>
